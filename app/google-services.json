@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "453469294211",
+    "project_id": "farketmez-5e48a",
+    "storage_bucket": "farketmez-5e48a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:453469294211:android:029cf04f10254a341715b6",
+        "android_client_info": {
+          "package_name": "com.example.farketmez"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "453469294211-l8oprmbpfsma13bbhcq3joutcdlt35j5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAzNIIzrJkTiHXuleELViWNmVXO5lSa1CQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "453469294211-l8oprmbpfsma13bbhcq3joutcdlt35j5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
