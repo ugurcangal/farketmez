@@ -17,6 +17,18 @@ class RegisterActivity : AppCompatActivity() {
         val view = binding.root
         setContentView(view)
         viewModel = ViewModelProvider(this)[RegisterViewModel::class.java]
+
+        binding.registerBTN.setOnClickListener {
+            viewModel.signUpFirebase(
+                binding.nameET.text.toString(),
+                binding.surnameET.text.toString(),
+                binding.emailET.text.toString(),
+                binding.passwordET.text.toString(),
+                binding.passwordConfirmET.text.toString(),
+                this
+            )
+        }
+
     }
 
 }

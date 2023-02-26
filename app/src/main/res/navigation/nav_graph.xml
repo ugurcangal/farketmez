@@ -14,7 +14,7 @@
         android:id="@+id/loginFragment"
         android:name="com.example.farketmez.view.ProfileFragment"
         android:label="fragment_login"
-        tools:layout="@layout/fragment_login" >
+        tools:layout="@layout/fragment_profile" >
         <action
             android:id="@+id/action_loginFragment_to_mainFragment"
             app:destination="@id/mainFragment" />
