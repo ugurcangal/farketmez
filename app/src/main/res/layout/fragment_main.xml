@@ -1,16 +1,237 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".view.MainFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="center"
-        android:textSize="36sp"
-        android:text="2" />
+        android:layout_height="match_parent">
 
-</FrameLayout>
+
+        <ImageView
+            android:id="@+id/logoIV"
+            android:layout_width="28dp"
+            android:layout_height="40dp"
+            android:src="@drawable/logo"
+            android:layout_marginTop="38dp"
+            android:layout_marginLeft="52dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+            android:id="@+id/logoText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Farketmez"
+            android:textColor="@color/logoGreen"
+            android:textSize="28sp"
+            android:fontFamily="@font/comfortaa"
+            android:letterSpacing="-0.03"
+            android:textStyle="bold"
+            android:layout_marginTop="38dp"
+            app:layout_constraintBottom_toBottomOf="@id/logoIV"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <ImageView
+            android:id="@+id/profileBtn"
+            android:layout_width="28dp"
+            android:layout_height="40dp"
+            android:src="@drawable/profile_icon"
+            android:layout_marginTop="38dp"
+            android:layout_marginRight="52dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+
+        <ImageView
+            android:id="@+id/yemekIMG"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/yemek"
+            android:layout_marginTop="36dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/logoText"/>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/main_image_filter"
+            android:layout_marginTop="36dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/logoText"/>
+        <TextView
+            android:id="@+id/yemekText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Yemek"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:textSize="36sp"
+            android:fontFamily="@font/comfortaa"
+            app:layout_constraintStart_toStartOf="@id/yemekIMG"
+            app:layout_constraintEnd_toEndOf="@id/yemekIMG"
+            app:layout_constraintBottom_toBottomOf="@id/yemekIMG"
+            app:layout_constraintTop_toTopOf="@id/yemekIMG"/>
+
+
+
+
+
+
+
+        <ImageView
+            android:id="@+id/icecekIMG"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/icecek"
+            android:layout_marginTop="36dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/yemekIMG"/>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/main_image_filter"
+            android:layout_marginTop="36dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/yemekIMG"/>
+        <TextView
+            android:id="@+id/icecekText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="İçecek"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:textSize="36sp"
+            android:fontFamily="@font/comfortaa"
+            app:layout_constraintStart_toStartOf="@id/icecekIMG"
+            app:layout_constraintEnd_toEndOf="@id/icecekIMG"
+            app:layout_constraintBottom_toBottomOf="@id/icecekIMG"
+            app:layout_constraintTop_toTopOf="@id/icecekIMG"/>
+
+
+
+
+
+
+
+        <ImageView
+            android:id="@+id/filmIMG"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/film"
+            android:layout_marginTop="36dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/icecekIMG"/>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/main_image_filter"
+            android:layout_marginTop="36dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/icecekIMG"/>
+        <TextView
+            android:id="@+id/filmText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Film"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:textSize="36sp"
+            android:fontFamily="@font/comfortaa"
+            app:layout_constraintStart_toStartOf="@id/filmIMG"
+            app:layout_constraintEnd_toEndOf="@id/filmIMG"
+            app:layout_constraintBottom_toBottomOf="@id/filmIMG"
+            app:layout_constraintTop_toTopOf="@id/filmIMG"/>
+
+
+
+
+
+
+        <ImageView
+            android:id="@+id/oyunIMG"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/oyun"
+            android:layout_marginTop="36dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/filmIMG"/>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/main_image_filter"
+            android:layout_marginTop="36dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/filmIMG"/>
+        <TextView
+            android:id="@+id/oyunText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Oyun"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:textSize="36sp"
+            android:fontFamily="@font/comfortaa"
+            app:layout_constraintStart_toStartOf="@id/oyunIMG"
+            app:layout_constraintEnd_toEndOf="@id/oyunIMG"
+            app:layout_constraintBottom_toBottomOf="@id/oyunIMG"
+            app:layout_constraintTop_toTopOf="@id/oyunIMG"/>
+
+
+
+
+
+
+
+        <ImageView
+            android:id="@+id/kitapIMG"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/kitap"
+            android:layout_marginTop="36dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/oyunIMG"/>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/main_image_filter"
+            android:layout_marginTop="36dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/oyunIMG"/>
+        <TextView
+            android:id="@+id/kitapText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Kitap"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:textSize="36sp"
+            android:fontFamily="@font/comfortaa"
+            app:layout_constraintStart_toStartOf="@id/kitapIMG"
+            app:layout_constraintEnd_toEndOf="@id/kitapIMG"
+            app:layout_constraintBottom_toBottomOf="@id/kitapIMG"
+            app:layout_constraintTop_toTopOf="@id/kitapIMG"/>
+
+
+
+
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

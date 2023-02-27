@@ -15,7 +15,6 @@ import com.google.firebase.ktx.Firebase
 class LoginViewModel : ViewModel() {
 
     private val auth = Firebase.auth
-    private lateinit var googleSignInClient : GoogleSignInClient
 
 
     fun signInWithFirebase(email : String, password: String, activity: LoginActivity){

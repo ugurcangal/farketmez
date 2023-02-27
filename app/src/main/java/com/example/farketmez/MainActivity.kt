@@ -22,14 +22,6 @@ class MainActivity : AppCompatActivity() {
 //
 //        binding.emailTxt.text = auth.currentUser?.email
 
-        binding.fragmentContainerView.setOnClickListener {
-            Firebase.auth.signOut()
-            val intent = Intent(this, LoginActivity::class.java)
-            startActivity(intent)
-            finish()
-        }
-
-
     }
 
 

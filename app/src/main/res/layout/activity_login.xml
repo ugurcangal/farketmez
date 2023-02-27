@@ -52,6 +52,7 @@
         android:layout_height="wrap_content"
         android:background="@drawable/edittext_bg"
         android:hint="Şifre"
+        android:inputType="textPassword"
         android:paddingLeft="20dp"
         android:fontFamily="@font/comfortaa"
         android:layout_marginTop="30dp"
