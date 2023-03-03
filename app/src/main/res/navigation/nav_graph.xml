@@ -34,5 +34,13 @@
         <argument
             android:name="chosenCategoryName"
             app:argType="string" />
+        <action
+            android:id="@+id/action_chosenCategoryFragment_to_chosenFoodFragment"
+            app:destination="@id/chosenFoodFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/chosenFoodFragment"
+        android:name="com.example.farketmez.view.ChosenFoodFragment"
+        android:label="fragment_chosen_food"
+        tools:layout="@layout/fragment_chosen_food" />
 </navigation>
