@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/constraintLayout"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".view.ChosenCategoryFragment">
+
+    <View
+        android:id="@+id/backButton"
+        android:layout_width="32dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginLeft="20dp"
+        android:background="@drawable/back_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+
+
+    <ImageView
+        android:id="@+id/logoIV"
+        android:layout_width="71dp"
+        android:layout_height="102dp"
+        android:src="@drawable/logo"
+        android:layout_marginTop="74dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+
+    <TextView
+        android:id="@+id/choosenText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Yemek"
+        android:textStyle="bold"
+        android:fontFamily="@font/comfortaa"
+        android:textColor="@color/logoGreen"
+        android:textSize="40sp"
+        android:layout_marginTop="12dp"
+        app:layout_constraintBottom_toTopOf="@id/choosenBG"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/logoIV"/>
+
+
+
+    <ImageView
+        android:id="@+id/choosenBG"
+        android:layout_width="match_parent"
+        android:layout_height="218dp"
+        android:src="@drawable/yemek"
+        android:scaleType="centerCrop"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/farketmezBTNCard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="7dp"
+        app:cardElevation="5dp"
+        android:layout_marginTop="34dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/choosenBG">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/farketmezBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Farketmez"
+            android:textAllCaps="false"
+            android:fontFamily="@font/comfortaa"
+            android:textColor="@color/white"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:background="@drawable/login_button"
+            android:backgroundTint="@color/logoGreen"
+            app:layout_constraintStart_toStartOf="@id/choosenBG"
+            app:layout_constraintEnd_toEndOf="@id/choosenBG"
+            app:layout_constraintTop_toBottomOf="@id/choosenText"/>
+
+    </androidx.cardview.widget.CardView>
+
+
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

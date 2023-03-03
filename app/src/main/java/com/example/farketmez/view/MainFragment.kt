@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.Navigation
 import androidx.navigation.fragment.findNavController
 import com.example.farketmez.R
 import com.example.farketmez.databinding.FragmentMainBinding
@@ -31,6 +32,32 @@ class MainFragment : Fragment() {
         binding.profileBtn.setOnClickListener {
             findNavController().navigate(R.id.action_mainFragment_to_profileFragment)
         }
+
+        binding.yemekIMG.setOnClickListener {
+            val action = MainFragmentDirections.actionMainFragmentToChosenCategoryFragment("Yemek")
+            Navigation.findNavController(it).navigate(action)
+        }
+
+        binding.icecekIMG.setOnClickListener {
+            val action = MainFragmentDirections.actionMainFragmentToChosenCategoryFragment("İçecek")
+            Navigation.findNavController(it).navigate(action)
+        }
+
+        binding.filmIMG.setOnClickListener {
+            val action = MainFragmentDirections.actionMainFragmentToChosenCategoryFragment("Film")
+            Navigation.findNavController(it).navigate(action)
+        }
+
+        binding.oyunIMG.setOnClickListener {
+            val action = MainFragmentDirections.actionMainFragmentToChosenCategoryFragment("Oyun")
+            Navigation.findNavController(it).navigate(action)
+        }
+
+        binding.kitapIMG.setOnClickListener {
+            val action = MainFragmentDirections.actionMainFragmentToChosenCategoryFragment("Kitap")
+            Navigation.findNavController(it).navigate(action)
+        }
+
     }
 
 }

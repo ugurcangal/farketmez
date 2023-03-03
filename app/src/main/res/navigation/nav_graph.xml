@@ -13,10 +13,26 @@
         <action
             android:id="@+id/action_mainFragment_to_profileFragment"
             app:destination="@id/profileFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_chosenCategoryFragment"
+            app:destination="@id/chosenCategoryFragment" >
+            <argument
+                android:name="chosenCategoryName"
+                android:defaultValue='""' />
+        </action>
     </fragment>
     <fragment
         android:id="@+id/profileFragment"
         android:name="com.example.farketmez.view.ProfileFragment"
         android:label="fragment_profile"
         tools:layout="@layout/fragment_profile" />
+    <fragment
+        android:id="@+id/chosenCategoryFragment"
+        android:name="com.example.farketmez.view.ChosenCategoryFragment"
+        android:label="fragment_chosen_category"
+        tools:layout="@layout/fragment_chosen_category" >
+        <argument
+            android:name="chosenCategoryName"
+            app:argType="string" />
+    </fragment>
 </navigation>

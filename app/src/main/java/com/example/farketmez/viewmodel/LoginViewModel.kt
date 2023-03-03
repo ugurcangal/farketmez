@@ -18,12 +18,16 @@ class LoginViewModel : ViewModel() {
 
 
     fun signInWithFirebase(email : String, password: String, activity: LoginActivity){
-        auth.signInWithEmailAndPassword(email, password).addOnSuccessListener {
-            val intent = Intent(activity, MainActivity::class.java)
-            activity.startActivity(intent)
-            activity.finish()
-        }.addOnFailureListener {
-            Toast.makeText(activity, it.localizedMessage, Toast.LENGTH_SHORT).show()
+        if (email.isNotEmpty() && password.isNotEmpty()){
+            auth.signInWithEmailAndPassword(email, password).addOnSuccessListener {
+                val intent = Intent(activity, MainActivity::class.java)
+                activity.startActivity(intent)
+                activity.finish()
+            }.addOnFailureListener {
+                Toast.makeText(activity, it.localizedMessage, Toast.LENGTH_SHORT).show()
+            }
+        }else{
+            Toast.makeText(activity, "Lütfen önce hesap bilgilerinizi girin!", Toast.LENGTH_SHORT).show()
         }
     }
 

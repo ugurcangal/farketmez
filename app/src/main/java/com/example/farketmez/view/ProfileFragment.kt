@@ -6,6 +6,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.fragment.findNavController
 import com.example.farketmez.BaseFragment
 import com.example.farketmez.databinding.FragmentProfileBinding
 import com.example.farketmez.viewmodel.ProfileViewModel
@@ -30,6 +31,11 @@ class ProfileFragment : BaseFragment<FragmentProfileBinding,ProfileViewModel>(Fr
             startActivity(intent)
             activity?.finish()
         }
+
+        binding.backButton.setOnClickListener {
+            findNavController().popBackStack()
+        }
+
     }
 
 
