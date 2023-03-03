@@ -50,8 +50,8 @@
 
         <ImageView
             android:id="@+id/yemekIMG"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
             android:src="@drawable/yemek"
             android:layout_marginTop="36dp"
             android:scaleType="centerCrop"
@@ -59,9 +59,10 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@id/logoText"/>
         <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
             android:src="@drawable/main_image_filter"
+            android:scaleType="centerCrop"
             android:layout_marginTop="36dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -88,18 +89,20 @@
 
         <ImageView
             android:id="@+id/icecekIMG"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
             android:src="@drawable/icecek"
-            android:layout_marginTop="36dp"
+            android:scaleType="centerCrop"
+            android:layout_marginTop="2dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@id/yemekIMG"/>
         <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
             android:src="@drawable/main_image_filter"
-            android:layout_marginTop="36dp"
+            android:scaleType="centerCrop"
+            android:layout_marginTop="2dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@id/yemekIMG"/>
@@ -125,18 +128,20 @@
 
         <ImageView
             android:id="@+id/filmIMG"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
             android:src="@drawable/film"
-            android:layout_marginTop="36dp"
+            android:scaleType="centerCrop"
+            android:layout_marginTop="2dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@id/icecekIMG"/>
         <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
             android:src="@drawable/main_image_filter"
-            android:layout_marginTop="36dp"
+            android:scaleType="centerCrop"
+            android:layout_marginTop="2dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@id/icecekIMG"/>
@@ -161,18 +166,20 @@
 
         <ImageView
             android:id="@+id/oyunIMG"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
             android:src="@drawable/oyun"
-            android:layout_marginTop="36dp"
+            android:scaleType="centerCrop"
+            android:layout_marginTop="2dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@id/filmIMG"/>
         <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
             android:src="@drawable/main_image_filter"
-            android:layout_marginTop="36dp"
+            android:scaleType="centerCrop"
+            android:layout_marginTop="2dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@id/filmIMG"/>
@@ -198,18 +205,20 @@
 
         <ImageView
             android:id="@+id/kitapIMG"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
             android:src="@drawable/kitap"
-            android:layout_marginTop="36dp"
+            android:scaleType="centerCrop"
+            android:layout_marginTop="2dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@id/oyunIMG"/>
         <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
             android:src="@drawable/main_image_filter"
-            android:layout_marginTop="36dp"
+            android:scaleType="centerCrop"
+            android:layout_marginTop="2dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@id/oyunIMG"/>
