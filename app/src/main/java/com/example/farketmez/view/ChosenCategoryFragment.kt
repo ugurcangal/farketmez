@@ -33,17 +33,17 @@ class ChosenCategoryFragment : BaseFragment<FragmentChosenCategoryBinding,Chosen
 
         //Main Image
         when(name){
-            "Yemek" -> binding.choosenBG.setImageResource(R.drawable.yemek)
-            "İçecek" -> binding.choosenBG.setImageResource(R.drawable.icecek)
-            "Film" -> binding.choosenBG.setImageResource(R.drawable.film)
-            "Oyun" -> binding.choosenBG.setImageResource(R.drawable.oyun)
-            "Kitap" -> binding.choosenBG.setImageResource(R.drawable.kitap)
+            "Yemek" -> binding.choosenBG.setImageResource(R.drawable.food2)
+            "Tatlı" -> binding.choosenBG.setImageResource(R.drawable.tatli)
+            "Film" -> binding.choosenBG.setImageResource(R.drawable.film2)
+            "Oyun" -> binding.choosenBG.setImageResource(R.drawable.game2)
+            "Kitap" -> binding.choosenBG.setImageResource(R.drawable.books2)
         }
 
         //Background
         when(name){
             "Yemek" -> binding.constraintLayout.setBackgroundResource(R.drawable.chosen_food_bg)
-            "İçecek" -> binding.constraintLayout.setBackgroundResource(R.drawable.chosen_drink_bg)
+            "Tatlı" -> binding.constraintLayout.setBackgroundResource(R.drawable.chosen_drink_bg)
             "Film" -> binding.constraintLayout.setBackgroundResource(R.drawable.chosen_film_bg)
             "Oyun" -> binding.constraintLayout.setBackgroundResource(R.drawable.chosen_game_bg)
             "Kitap" -> binding.constraintLayout.setBackgroundResource(R.drawable.chosen_book_bg)
@@ -63,14 +63,15 @@ class ChosenCategoryFragment : BaseFragment<FragmentChosenCategoryBinding,Chosen
             "Yemek" -> dialogLottie.setAnimation(R.raw.food_animation)
             "Oyun" -> dialogLottie.setAnimation(R.raw.game_animation)
             "Film" -> dialogLottie.setAnimation(R.raw.film_animation)
-            "İçecek" -> dialogLottie.setAnimation(R.raw.drink_animation)
+            "Tatlı" -> dialogLottie.setAnimation(R.raw.tatli_animation
+            )
             "Kitap" -> dialogLottie.setAnimation(R.raw.book_animation)
         }
 
         //Dialog Text
         when(name){
             "Yemek" -> dialogText.text = "Rastgele Yemek Seçiliyor!"
-            "İçecek" -> dialogText.text = "Rastgele İçecek Seçiliyor!"
+            "Tatlı" -> dialogText.text = "Rastgele Tatlı Seçiliyor!"
             "Film" -> dialogText.text = "Rastgele Film Seçiliyor!"
             "Oyun" -> dialogText.text = "Rastgele Oyun Seçiliyor!"
             "Kitap" -> dialogText.text = "Rastgele Kitap Seçiliyor!"

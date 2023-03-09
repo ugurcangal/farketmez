@@ -38,8 +38,8 @@ class MainFragment : Fragment() {
             Navigation.findNavController(it).navigate(action)
         }
 
-        binding.icecekIMG.setOnClickListener {
-            val action = MainFragmentDirections.actionMainFragmentToChosenCategoryFragment("İçecek")
+        binding.tatliIMG.setOnClickListener {
+            val action = MainFragmentDirections.actionMainFragmentToChosenCategoryFragment("Tatlı")
             Navigation.findNavController(it).navigate(action)
         }
 

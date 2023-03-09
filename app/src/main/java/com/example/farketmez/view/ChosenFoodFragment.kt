@@ -5,6 +5,8 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.graphics.drawable.toDrawable
+import androidx.navigation.fragment.findNavController
 import com.example.farketmez.BaseFragment
 import com.example.farketmez.R
 import com.example.farketmez.databinding.FragmentChosenFoodBinding
@@ -17,7 +19,24 @@ class ChosenFoodFragment : BaseFragment<FragmentChosenFoodBinding, ChosenFoodVie
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        viewModel.dontShowAgainCheck()
+        viewModel.getRandomFood(binding, view)
+        viewModel.favoriteControl(binding)
 
+
+        binding.backButton.setOnClickListener {
+            findNavController().popBackStack()
+        }
+
+        binding.favoriteButton.setOnClickListener {
+            viewModel.addFavorite(binding)
+        }
+        binding.notFavoriteButton.setOnClickListener {
+            viewModel.deleteFavorite(binding)
+        }
+        binding.dontShowThisAgainTxt.setOnClickListener {
+            viewModel.dontShowAgainAdd()
+        }
 
     }
 

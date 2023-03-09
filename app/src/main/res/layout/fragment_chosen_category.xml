@@ -9,9 +9,9 @@
 
     <View
         android:id="@+id/backButton"
-        android:layout_width="32dp"
-        android:layout_height="32dp"
-        android:layout_marginTop="40dp"
+        android:layout_width="38dp"
+        android:layout_height="38dp"
+        android:layout_marginTop="20dp"
         android:layout_marginLeft="20dp"
         android:background="@drawable/back_button"
         app:layout_constraintStart_toStartOf="parent"
@@ -52,7 +52,6 @@
         android:id="@+id/choosenBG"
         android:layout_width="match_parent"
         android:layout_height="218dp"
-        android:src="@drawable/yemek"
         android:scaleType="centerCrop"
         android:layout_marginTop="20dp"
         app:layout_constraintStart_toStartOf="parent"

@@ -88,10 +88,10 @@
 
 
         <ImageView
-            android:id="@+id/icecekIMG"
+            android:id="@+id/tatliIMG"
             android:layout_width="match_parent"
             android:layout_height="180dp"
-            android:src="@drawable/icecek"
+            android:src="@drawable/tatli"
             android:scaleType="centerCrop"
             android:layout_marginTop="2dp"
             app:layout_constraintStart_toStartOf="parent"
@@ -110,15 +110,15 @@
             android:id="@+id/icecekText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="İçecek"
+            android:text="Tatlı"
             android:textColor="@color/white"
             android:textStyle="bold"
             android:textSize="36sp"
             android:fontFamily="@font/comfortaa"
-            app:layout_constraintStart_toStartOf="@id/icecekIMG"
-            app:layout_constraintEnd_toEndOf="@id/icecekIMG"
-            app:layout_constraintBottom_toBottomOf="@id/icecekIMG"
-            app:layout_constraintTop_toTopOf="@id/icecekIMG"/>
+            app:layout_constraintStart_toStartOf="@id/tatliIMG"
+            app:layout_constraintEnd_toEndOf="@id/tatliIMG"
+            app:layout_constraintBottom_toBottomOf="@id/tatliIMG"
+            app:layout_constraintTop_toTopOf="@id/tatliIMG"/>
 
 
 
@@ -135,7 +135,7 @@
             android:layout_marginTop="2dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/icecekIMG"/>
+            app:layout_constraintTop_toBottomOf="@id/tatliIMG"/>
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="180dp"
@@ -144,7 +144,7 @@
             android:layout_marginTop="2dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/icecekIMG"/>
+            app:layout_constraintTop_toBottomOf="@id/tatliIMG"/>
         <TextView
             android:id="@+id/filmText"
             android:layout_width="wrap_content"
