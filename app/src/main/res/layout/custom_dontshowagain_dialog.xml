@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/card"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="7dp"
+    app:cardElevation="0dp"
+    app:cardMaxElevation="0dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="362dp"
+        android:background="@color/logoGreen"
+        android:layout_height="254dp">
+
+
+
+        <TextView
+            android:id="@+id/warningTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Bir daha bu seçenek karşınıza gelmeyecek!\nEmin misiniz?"
+            android:textAlignment="center"
+            android:textSize="26sp"
+            android:textColor="@color/logoBrown"
+            android:fontFamily="@font/comfortaa"
+            android:layout_marginTop="30dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/yesBTN"
+            android:layout_width="137dp"
+            android:layout_height="44dp"
+            android:background="@drawable/login_button"
+            android:fontFamily="@font/comfortaa"
+            android:text="Evet"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:textAllCaps="false"
+            android:textSize="16sp"
+            app:backgroundTint="@color/logoBrown"
+            android:layout_marginLeft="24dp"
+            android:layout_marginBottom="40dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+             />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/noBTN"
+            android:layout_width="137dp"
+            android:layout_height="44dp"
+            android:background="@drawable/login_button"
+            android:fontFamily="@font/comfortaa"
+            android:text="Vazgeç"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:textAllCaps="false"
+            android:textSize="16sp"
+            app:backgroundTint="@color/logoBrown"
+            android:layout_marginRight="24dp"
+            android:layout_marginBottom="40dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

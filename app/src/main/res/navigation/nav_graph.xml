@@ -37,10 +37,28 @@
         <action
             android:id="@+id/action_chosenCategoryFragment_to_chosenFoodFragment"
             app:destination="@id/chosenFoodFragment" />
+        <action
+            android:id="@+id/action_chosenCategoryFragment_to_chosenDessertFragment"
+            app:destination="@id/chosenDessertFragment" />
     </fragment>
     <fragment
         android:id="@+id/chosenFoodFragment"
         android:name="com.example.farketmez.view.ChosenFoodFragment"
         android:label="fragment_chosen_food"
-        tools:layout="@layout/fragment_chosen_food" />
+        tools:layout="@layout/fragment_chosen_food" >
+        <action
+            android:id="@+id/action_chosenFoodFragment_to_mainFragment"
+            app:destination="@id/mainFragment"
+            app:popUpTo="@id/mainFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/chosenDessertFragment"
+        android:name="com.example.farketmez.view.ChosenDessertFragment"
+        android:label="fragment_chosen_dessert"
+        tools:layout="@layout/fragment_chosen_dessert" >
+        <action
+            android:id="@+id/action_chosenDessertFragment_to_mainFragment"
+            app:destination="@id/mainFragment"
+            app:popUpTo="@id/mainFragment" />
+    </fragment>
 </navigation>

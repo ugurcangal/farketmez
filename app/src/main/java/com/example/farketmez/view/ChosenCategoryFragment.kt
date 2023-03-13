@@ -43,7 +43,7 @@ class ChosenCategoryFragment : BaseFragment<FragmentChosenCategoryBinding,Chosen
         //Background
         when(name){
             "Yemek" -> binding.constraintLayout.setBackgroundResource(R.drawable.chosen_food_bg)
-            "Tatlı" -> binding.constraintLayout.setBackgroundResource(R.drawable.chosen_drink_bg)
+            "Tatlı" -> binding.constraintLayout.setBackgroundResource(R.drawable.chosen_dessert_bg)
             "Film" -> binding.constraintLayout.setBackgroundResource(R.drawable.chosen_film_bg)
             "Oyun" -> binding.constraintLayout.setBackgroundResource(R.drawable.chosen_game_bg)
             "Kitap" -> binding.constraintLayout.setBackgroundResource(R.drawable.chosen_book_bg)
@@ -63,8 +63,7 @@ class ChosenCategoryFragment : BaseFragment<FragmentChosenCategoryBinding,Chosen
             "Yemek" -> dialogLottie.setAnimation(R.raw.food_animation)
             "Oyun" -> dialogLottie.setAnimation(R.raw.game_animation)
             "Film" -> dialogLottie.setAnimation(R.raw.film_animation)
-            "Tatlı" -> dialogLottie.setAnimation(R.raw.tatli_animation
-            )
+            "Tatlı" -> dialogLottie.setAnimation(R.raw.tatli_animation)
             "Kitap" -> dialogLottie.setAnimation(R.raw.book_animation)
         }
 
@@ -90,7 +89,12 @@ class ChosenCategoryFragment : BaseFragment<FragmentChosenCategoryBinding,Chosen
             }, 3000)
         }
         dialog.setOnDismissListener {
-            findNavController().navigate(R.id.action_chosenCategoryFragment_to_chosenFoodFragment)
+            when(name){
+                "Yemek" -> findNavController().navigate(R.id.action_chosenCategoryFragment_to_chosenFoodFragment)
+                "Tatlı" -> findNavController().navigate(R.id.action_chosenCategoryFragment_to_chosenDessertFragment)
+
+            }
+
         }
 
 

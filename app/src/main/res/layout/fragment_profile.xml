@@ -12,7 +12,7 @@
     <View
         android:id="@+id/greenBack"
         android:layout_width="match_parent"
-        android:layout_height="137dp"
+        android:layout_height="167dp"
         android:background="@drawable/profile_green_rec"
         android:layout_marginTop="56dp"
         app:layout_constraintStart_toStartOf="parent"
@@ -65,10 +65,10 @@
         android:textSize="32sp"
         android:textColor="@color/white"
         android:letterSpacing="-0.02"
-        android:layout_marginLeft="10dp"
         android:fontFamily="@font/comfortaa"
-        app:layout_constraintTop_toBottomOf="@id/helloTxt"
-        app:layout_constraintStart_toEndOf="@id/nameTxt"/>
+        app:layout_constraintTop_toBottomOf="@id/nameTxt"
+        app:layout_constraintEnd_toEndOf="@id/greenBack"
+        app:layout_constraintStart_toStartOf="@id/greenBack"/>
 
 
     <ImageView

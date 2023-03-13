@@ -9,25 +9,25 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.TextView
 import android.widget.Toast
-import androidx.core.graphics.drawable.toDrawable
 import androidx.navigation.fragment.findNavController
+import com.airbnb.lottie.LottieAnimationView
 import com.example.farketmez.BaseFragment
 import com.example.farketmez.R
-import com.example.farketmez.databinding.FragmentChosenFoodBinding
-import com.example.farketmez.viewmodel.ChosenFoodViewModel
+import com.example.farketmez.databinding.FragmentChosenDessertBinding
+import com.example.farketmez.viewmodel.ChosenDessertViewModel
 
 
-class ChosenFoodFragment : BaseFragment<FragmentChosenFoodBinding, ChosenFoodViewModel>(FragmentChosenFoodBinding::inflate) {
+class ChosenDessertFragment : BaseFragment<FragmentChosenDessertBinding, ChosenDessertViewModel>(FragmentChosenDessertBinding::inflate) {
 
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
         viewModel.dontShowAgainCheck()
-        viewModel.getRandomFood(binding, view)
+        viewModel.getRandomDessert(binding, view)
         viewModel.favoriteControl(binding)
-
 
         binding.backButton.setOnClickListener {
             findNavController().popBackStack()
@@ -39,6 +39,7 @@ class ChosenFoodFragment : BaseFragment<FragmentChosenFoodBinding, ChosenFoodVie
         binding.notFavoriteButton.setOnClickListener {
             viewModel.deleteFavorite(binding)
         }
+
 
         //DontShowAgain Dialog
         val dialogBinding = layoutInflater.inflate(R.layout.custom_dontshowagain_dialog, null)
@@ -55,7 +56,7 @@ class ChosenFoodFragment : BaseFragment<FragmentChosenFoodBinding, ChosenFoodVie
             viewModel.dontShowAgainAdd()
             dialog.dismiss()
             Toast.makeText(context, "Bu seçenek bir daha karşınıza gelmeyecek!", Toast.LENGTH_SHORT).show()
-            findNavController().navigate(R.id.action_chosenFoodFragment_to_mainFragment)
+            findNavController().navigate(R.id.action_chosenDessertFragment_to_mainFragment)
         }
         dialogNoBtn.setOnClickListener {
             dialog.dismiss()
@@ -65,6 +66,7 @@ class ChosenFoodFragment : BaseFragment<FragmentChosenFoodBinding, ChosenFoodVie
 
 
 
-    override fun getViewModel(): Class<ChosenFoodViewModel> = ChosenFoodViewModel::class.java
+    override fun getViewModel(): Class<ChosenDessertViewModel> = ChosenDessertViewModel::class.java
+
 
 }
