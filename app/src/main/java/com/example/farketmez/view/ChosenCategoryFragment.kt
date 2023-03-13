@@ -94,6 +94,7 @@ class ChosenCategoryFragment : BaseFragment<FragmentChosenCategoryBinding,Chosen
                 "Tatlı" -> findNavController().navigate(R.id.action_chosenCategoryFragment_to_chosenDessertFragment)
                 "Film" -> findNavController().navigate(R.id.action_chosenCategoryFragment_to_chosenFilmFragment)
                 "Kitap" -> findNavController().navigate(R.id.action_chosenCategoryFragment_to_chosenBookFragment)
+                "Dizi" -> findNavController().navigate(R.id.action_chosenCategoryFragment_to_chosenSeriesFragment)
 
             }
 

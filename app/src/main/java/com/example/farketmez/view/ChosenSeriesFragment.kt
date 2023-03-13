@@ -13,17 +13,18 @@ import android.widget.Toast
 import androidx.navigation.fragment.findNavController
 import com.example.farketmez.BaseFragment
 import com.example.farketmez.R
-import com.example.farketmez.databinding.FragmentChosenBookBinding
-import com.example.farketmez.viewmodel.ChosenBookViewModel
+import com.example.farketmez.databinding.FragmentChosenSeriesBinding
+import com.example.farketmez.viewmodel.ChosenSeriesViewModel
 
 
-class ChosenBookFragment : BaseFragment<FragmentChosenBookBinding,ChosenBookViewModel>(FragmentChosenBookBinding::inflate) {
+class ChosenSeriesFragment : BaseFragment<FragmentChosenSeriesBinding,ChosenSeriesViewModel>(FragmentChosenSeriesBinding::inflate) {
+
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
         viewModel.dontShowAgainCheck()
-        viewModel.getRandomBook(binding, view)
+        viewModel.getRandomSeries(binding, view)
         viewModel.favoriteControl(binding)
 
         binding.backButton.setOnClickListener {
@@ -54,16 +55,14 @@ class ChosenBookFragment : BaseFragment<FragmentChosenBookBinding,ChosenBookView
             viewModel.dontShowAgainAdd()
             dialog.dismiss()
             Toast.makeText(context, "Bu seçenek bir daha karşınıza gelmeyecek!", Toast.LENGTH_SHORT).show()
-            findNavController().navigate(R.id.action_chosenBookFragment_to_mainFragment)
+            findNavController().navigate(R.id.action_chosenSeriesFragment_to_mainFragment)
         }
         dialogNoBtn.setOnClickListener {
             dialog.dismiss()
         }
-
     }
 
 
-
-    override fun getViewModel(): Class<ChosenBookViewModel> = ChosenBookViewModel::class.java
+    override fun getViewModel(): Class<ChosenSeriesViewModel> = ChosenSeriesViewModel::class.java
 
 }

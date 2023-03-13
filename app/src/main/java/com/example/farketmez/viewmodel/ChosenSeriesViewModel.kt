@@ -3,44 +3,44 @@ package com.example.farketmez.viewmodel
 import android.view.View
 import com.bumptech.glide.Glide
 import com.example.farketmez.BaseViewModel
-import com.example.farketmez.databinding.FragmentChosenBookBinding
+import com.example.farketmez.databinding.FragmentChosenSeriesBinding
 
-class ChosenBookViewModel : BaseViewModel() {
+class ChosenSeriesViewModel : BaseViewModel() {
 
     private var favoritesList = ArrayList<Any>()
     private val favoritesMap = HashMap<String, Any>()
     private var dontShowAgainList = ArrayList<Any>()
     private val dontShowAgainMap = HashMap<String, Any>()
-    private lateinit var  bookID : String
+    private lateinit var  seriesID : String
 
 
-    fun getRandomBook(binding: FragmentChosenBookBinding, view: View){
-        firestore.collection("Books").addSnapshotListener { value, error ->
+    fun getRandomSeries(binding: FragmentChosenSeriesBinding, view: View){
+        firestore.collection("Series").addSnapshotListener { value, error ->
             value?.let {
                 dontShowAgainCheck()
-                val books = value.documents
-                var book = books.random()
-                bookID = book.id
+                val series = value.documents
+                var oneSerie = series.random()
+                seriesID = oneSerie.id
                 println(dontShowAgainList.size)
-                while (dontShowAgainList.contains(book.id)){
-                    books.remove(book)
-                    book = books.random()
-                    bookID = book.id
+                while (dontShowAgainList.contains(oneSerie.id)){
+                    series.remove(oneSerie)
+                    oneSerie = series.random()
+                    seriesID = oneSerie.id
                 }
-                if (books.isNotEmpty()){
-                    binding.bookNameTxt.text = book.get("bookName") as String
-                    Glide.with(view).load(book.get("imgLink").toString()).into(binding.bookIV)
+                if (series.isNotEmpty()){
+                    binding.seriesNameTxt.text = oneSerie.get("seriesName") as String
+                    Glide.with(view).load(oneSerie.get("imgLink").toString()).into(binding.seriesIV)
                 }
             }
         }
     }
 
-    fun favoriteControl(binding: FragmentChosenBookBinding){
+    fun favoriteControl(binding: FragmentChosenSeriesBinding){
         firestore.collection("Users").document(auth.currentUser!!.email.toString()).addSnapshotListener { value, error ->
             value?.let {
                 if (it.data?.get("favorites") != null){
                     favoritesList = it.get("favorites") as ArrayList<Any>
-                    if (favoritesList.contains(bookID)){
+                    if (favoritesList.contains(seriesID)){
                         binding.favoriteButton.visibility = View.GONE
                         binding.notFavoriteButton.visibility = View.VISIBLE
                     }
@@ -49,16 +49,16 @@ class ChosenBookViewModel : BaseViewModel() {
         }
     }
 
-    fun addFavorite(binding: FragmentChosenBookBinding){
-        favoritesList.add(bookID)
+    fun addFavorite(binding: FragmentChosenSeriesBinding){
+        favoritesList.add(seriesID)
         favoritesMap.put("favorites", favoritesList)
         firestore.collection("Users").document(auth.currentUser!!.email.toString()).update(favoritesMap)
         binding.favoriteButton.visibility = View.GONE
         binding.notFavoriteButton.visibility = View.VISIBLE
     }
 
-    fun deleteFavorite(binding: FragmentChosenBookBinding){
-        favoritesList.remove(bookID)
+    fun deleteFavorite(binding: FragmentChosenSeriesBinding){
+        favoritesList.remove(seriesID)
         favoritesMap.put("favorites", favoritesList)
         firestore.collection("Users").document(auth.currentUser!!.email.toString()).update(favoritesMap)
         binding.notFavoriteButton.visibility = View.GONE
@@ -66,7 +66,7 @@ class ChosenBookViewModel : BaseViewModel() {
     }
 
     fun dontShowAgainAdd(){
-        dontShowAgainList.add(bookID)
+        dontShowAgainList.add(seriesID)
         dontShowAgainMap.put("dontShowAgain", dontShowAgainList)
         firestore.collection("Users").document(auth.currentUser!!.email.toString()).update(dontShowAgainMap)
 

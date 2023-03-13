@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".view.ChosenSeriesFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/topLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <View
+            android:id="@+id/backButton"
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="20dp"
+            android:background="@drawable/back_button"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            />
+
+        <View
+            android:id="@+id/favoriteButton"
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/baseline_favorite_border_24"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            />
+
+        <View
+            android:id="@+id/notFavoriteButton"
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="20dp"
+            android:visibility="gone"
+            android:background="@drawable/baseline_favorite_24"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            />
+
+        <ImageView
+            android:id="@+id/logoIV"
+            android:layout_width="48dp"
+            android:layout_height="61dp"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/logo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/topLayout"
+        app:layout_constraintBottom_toBottomOf="parent"
+        >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <ImageView
+                android:id="@+id/seriesIV"
+                android:layout_width="match_parent"
+                android:layout_height="429dp"
+                android:layout_marginTop="20dp"
+                android:scaleType="fitCenter"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+            <View
+                android:id="@+id/nameBG"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/food_name_bg"
+                app:layout_constraintBottom_toBottomOf="@id/seriesIV"
+                app:layout_constraintTop_toBottomOf="@id/seriesIV"
+                />
+
+            <TextView
+                android:id="@+id/seriesNameTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:fontFamily="@font/comfortaa"
+                android:textColor="@color/logoBrown"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/nameBG"
+                app:layout_constraintBottom_toBottomOf="@id/nameBG"/>
+
+
+            <TextView
+                android:id="@+id/dontShowThisAgainTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bunu Bir Daha Gösterme"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:fontFamily="@font/comfortaa"
+                android:layout_marginTop="50dp"
+                android:textColor="@color/logoGreen"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/nameBG"/>
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
