@@ -40,6 +40,12 @@
         <action
             android:id="@+id/action_chosenCategoryFragment_to_chosenDessertFragment"
             app:destination="@id/chosenDessertFragment" />
+        <action
+            android:id="@+id/action_chosenCategoryFragment_to_chosenFilmFragment"
+            app:destination="@id/chosenFilmFragment" />
+        <action
+            android:id="@+id/action_chosenCategoryFragment_to_chosenBookFragment"
+            app:destination="@id/chosenBookFragment" />
     </fragment>
     <fragment
         android:id="@+id/chosenFoodFragment"
@@ -60,5 +66,23 @@
             android:id="@+id/action_chosenDessertFragment_to_mainFragment"
             app:destination="@id/mainFragment"
             app:popUpTo="@id/mainFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/chosenFilmFragment"
+        android:name="com.example.farketmez.view.ChosenFilmFragment"
+        android:label="fragment_chosen_film"
+        tools:layout="@layout/fragment_chosen_film" >
+        <action
+            android:id="@+id/action_chosenFilmFragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/chosenBookFragment"
+        android:name="com.example.farketmez.view.ChosenBookFragment"
+        android:label="fragment_chosen_book"
+        tools:layout="@layout/fragment_chosen_book" >
+        <action
+            android:id="@+id/action_chosenBookFragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
     </fragment>
 </navigation>

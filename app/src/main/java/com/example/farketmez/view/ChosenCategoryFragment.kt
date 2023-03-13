@@ -36,7 +36,7 @@ class ChosenCategoryFragment : BaseFragment<FragmentChosenCategoryBinding,Chosen
             "Yemek" -> binding.choosenBG.setImageResource(R.drawable.food2)
             "Tatlı" -> binding.choosenBG.setImageResource(R.drawable.tatli)
             "Film" -> binding.choosenBG.setImageResource(R.drawable.film2)
-            "Oyun" -> binding.choosenBG.setImageResource(R.drawable.game2)
+            "Dizi" -> binding.choosenBG.setImageResource(R.drawable.series2)
             "Kitap" -> binding.choosenBG.setImageResource(R.drawable.books2)
         }
 
@@ -45,7 +45,7 @@ class ChosenCategoryFragment : BaseFragment<FragmentChosenCategoryBinding,Chosen
             "Yemek" -> binding.constraintLayout.setBackgroundResource(R.drawable.chosen_food_bg)
             "Tatlı" -> binding.constraintLayout.setBackgroundResource(R.drawable.chosen_dessert_bg)
             "Film" -> binding.constraintLayout.setBackgroundResource(R.drawable.chosen_film_bg)
-            "Oyun" -> binding.constraintLayout.setBackgroundResource(R.drawable.chosen_game_bg)
+            "Dizi" -> binding.constraintLayout.setBackgroundResource(R.drawable.chosen_series_bg)
             "Kitap" -> binding.constraintLayout.setBackgroundResource(R.drawable.chosen_book_bg)
         }
 
@@ -61,7 +61,7 @@ class ChosenCategoryFragment : BaseFragment<FragmentChosenCategoryBinding,Chosen
         //Dialog Animation
         when(name){
             "Yemek" -> dialogLottie.setAnimation(R.raw.food_animation)
-            "Oyun" -> dialogLottie.setAnimation(R.raw.game_animation)
+            "Dizi" -> dialogLottie.setAnimation(R.raw.series_animation)
             "Film" -> dialogLottie.setAnimation(R.raw.film_animation)
             "Tatlı" -> dialogLottie.setAnimation(R.raw.tatli_animation)
             "Kitap" -> dialogLottie.setAnimation(R.raw.book_animation)
@@ -72,7 +72,7 @@ class ChosenCategoryFragment : BaseFragment<FragmentChosenCategoryBinding,Chosen
             "Yemek" -> dialogText.text = "Rastgele Yemek Seçiliyor!"
             "Tatlı" -> dialogText.text = "Rastgele Tatlı Seçiliyor!"
             "Film" -> dialogText.text = "Rastgele Film Seçiliyor!"
-            "Oyun" -> dialogText.text = "Rastgele Oyun Seçiliyor!"
+            "Dizi" -> dialogText.text = "Rastgele Dizi Seçiliyor!"
             "Kitap" -> dialogText.text = "Rastgele Kitap Seçiliyor!"
         }
 
@@ -92,6 +92,8 @@ class ChosenCategoryFragment : BaseFragment<FragmentChosenCategoryBinding,Chosen
             when(name){
                 "Yemek" -> findNavController().navigate(R.id.action_chosenCategoryFragment_to_chosenFoodFragment)
                 "Tatlı" -> findNavController().navigate(R.id.action_chosenCategoryFragment_to_chosenDessertFragment)
+                "Film" -> findNavController().navigate(R.id.action_chosenCategoryFragment_to_chosenFilmFragment)
+                "Kitap" -> findNavController().navigate(R.id.action_chosenCategoryFragment_to_chosenBookFragment)
 
             }
 

@@ -165,10 +165,10 @@
 
 
         <ImageView
-            android:id="@+id/oyunIMG"
+            android:id="@+id/diziIMG"
             android:layout_width="match_parent"
             android:layout_height="180dp"
-            android:src="@drawable/oyun"
+            android:src="@drawable/dizi"
             android:scaleType="centerCrop"
             android:layout_marginTop="2dp"
             app:layout_constraintStart_toStartOf="parent"
@@ -187,15 +187,15 @@
             android:id="@+id/oyunText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Oyun"
+            android:text="Dizi"
             android:textColor="@color/white"
             android:textStyle="bold"
             android:textSize="36sp"
             android:fontFamily="@font/comfortaa"
-            app:layout_constraintStart_toStartOf="@id/oyunIMG"
-            app:layout_constraintEnd_toEndOf="@id/oyunIMG"
-            app:layout_constraintBottom_toBottomOf="@id/oyunIMG"
-            app:layout_constraintTop_toTopOf="@id/oyunIMG"/>
+            app:layout_constraintStart_toStartOf="@id/diziIMG"
+            app:layout_constraintEnd_toEndOf="@id/diziIMG"
+            app:layout_constraintBottom_toBottomOf="@id/diziIMG"
+            app:layout_constraintTop_toTopOf="@id/diziIMG"/>
 
 
 
@@ -212,7 +212,7 @@
             android:layout_marginTop="2dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/oyunIMG"/>
+            app:layout_constraintTop_toBottomOf="@id/diziIMG"/>
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="180dp"
@@ -221,7 +221,7 @@
             android:layout_marginTop="2dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/oyunIMG"/>
+            app:layout_constraintTop_toBottomOf="@id/diziIMG"/>
         <TextView
             android:id="@+id/kitapText"
             android:layout_width="wrap_content"
