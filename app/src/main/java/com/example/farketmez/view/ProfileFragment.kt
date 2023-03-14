@@ -39,6 +39,9 @@ class ProfileFragment : BaseFragment<FragmentProfileBinding,ProfileViewModel>(Fr
         binding.favoriteBtn.setOnClickListener {
             findNavController().navigate(R.id.action_profileFragment_to_favoritesFragment)
         }
+        binding.blocksBtn.setOnClickListener {
+            findNavController().navigate(R.id.action_profileFragment_to_dontShowAgainFragment)
+        }
 
     }
 
