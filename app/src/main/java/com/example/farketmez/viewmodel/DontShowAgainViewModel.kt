@@ -11,10 +11,12 @@ class DontShowAgainViewModel : BaseViewModel() {
 
     var dontShowAgainList = MutableLiveData<ArrayList<Random>>()
     var dontShowAgainListString = ArrayList<String>()
-    var randomList = ArrayList<Random>()
+
 
 
     fun getAllDontShowAgain(binding: FragmentDontShowAgainBinding){
+
+        var randomList = ArrayList<Random>()
 
         firestore.collection("Users").document(auth.currentUser!!.email.toString()).addSnapshotListener { value, error ->
             value?.let {
@@ -39,6 +41,7 @@ class DontShowAgainViewModel : BaseViewModel() {
                         val imgLink = document.get("imgLink") as String
                         val random = Random(id,name, imgLink)
                         randomList.add(random)
+                        dontShowAgainList.value = randomList
                     }
                 }
 
@@ -56,6 +59,8 @@ class DontShowAgainViewModel : BaseViewModel() {
 
                         val random = Random(id,name, imgLink)
                         randomList.add(random)
+                        dontShowAgainList.value = randomList
+
                     }
                 }
 
@@ -73,6 +78,8 @@ class DontShowAgainViewModel : BaseViewModel() {
 
                         val random = Random(id,name, imgLink)
                         randomList.add(random)
+                        dontShowAgainList.value = randomList
+
                     }
                 }
 
@@ -90,6 +97,8 @@ class DontShowAgainViewModel : BaseViewModel() {
 
                         val random = Random(id,name, imgLink)
                         randomList.add(random)
+                        dontShowAgainList.value = randomList
+
                     }
                 }
 
@@ -107,13 +116,12 @@ class DontShowAgainViewModel : BaseViewModel() {
 
                         val random = Random(id,name, imgLink)
                         randomList.add(random)
-
+                        dontShowAgainList.value = randomList
                     }
                 }
 
             }
         }
-        dontShowAgainList.postValue(randomList)
 
 
     }

@@ -11,10 +11,11 @@ class FavoritesViewModel : BaseViewModel() {
 
     var favoritesList = MutableLiveData<ArrayList<Random>>()
     var favoritesListString = ArrayList<String>()
-    var randomList = ArrayList<Random>()
 
 
     fun getAllFavorites(binding: FragmentFavoritesBinding){
+
+        var randomList = ArrayList<Random>()
 
         firestore.collection("Users").document(auth.currentUser!!.email.toString()).addSnapshotListener { value, error ->
             value?.let {
@@ -39,6 +40,7 @@ class FavoritesViewModel : BaseViewModel() {
                         val imgLink = document.get("imgLink") as String
                         val random = Random(id,name, imgLink)
                         randomList.add(random)
+                        favoritesList.value = randomList
                     }
                 }
 
@@ -56,6 +58,7 @@ class FavoritesViewModel : BaseViewModel() {
 
                         val random = Random(id,name, imgLink)
                         randomList.add(random)
+                        favoritesList.value = randomList
                     }
                 }
 
@@ -73,6 +76,8 @@ class FavoritesViewModel : BaseViewModel() {
 
                         val random = Random(id,name, imgLink)
                         randomList.add(random)
+                        favoritesList.value = randomList
+
                     }
                 }
 
@@ -90,6 +95,7 @@ class FavoritesViewModel : BaseViewModel() {
 
                         val random = Random(id,name, imgLink)
                         randomList.add(random)
+                        favoritesList.value = randomList
                     }
                 }
 
@@ -107,14 +113,13 @@ class FavoritesViewModel : BaseViewModel() {
 
                         val random = Random(id,name, imgLink)
                         randomList.add(random)
-
+                        favoritesList.value = randomList
                     }
                 }
 
             }
         }
 
-        favoritesList.postValue(randomList)
 
     }
 
