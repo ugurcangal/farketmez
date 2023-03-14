@@ -52,6 +52,10 @@ class FavoritesAdapter(var favoritesList: ArrayList<Random>):
         item.deleteFavoriteButton.setOnClickListener {
             if (favoritesList.size == 1){
                 favoritesList.clear()
+                notifyDataSetChanged()
+            }else{
+                favoritesList.removeAt(position)
+                notifyItemRemoved(position)
             }
             if (favorites.contains(favoriteItem.id)){
                 favorites.remove(favoriteItem.id)

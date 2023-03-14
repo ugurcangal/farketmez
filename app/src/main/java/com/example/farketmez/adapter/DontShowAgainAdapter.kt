@@ -46,6 +46,10 @@ class DontShowAgainAdapter (var dontShowAgainList: ArrayList<Random>):
         item.deleteItemButton.setOnClickListener {
             if (dontShowAgainList.size == 1){
                 dontShowAgainList.clear()
+                notifyDataSetChanged()
+            }else{
+                dontShowAgainList.removeAt(position)
+                notifyItemRemoved(position)
             }
             if (dontShowAgains.contains(favoriteItem.id)){
                 dontShowAgains.remove(favoriteItem.id)
