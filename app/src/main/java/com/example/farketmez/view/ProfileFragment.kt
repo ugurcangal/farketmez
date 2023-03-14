@@ -8,6 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import com.example.farketmez.BaseFragment
+import com.example.farketmez.R
 import com.example.farketmez.databinding.FragmentProfileBinding
 import com.example.farketmez.viewmodel.ProfileViewModel
 import com.google.firebase.auth.ktx.auth
@@ -34,6 +35,9 @@ class ProfileFragment : BaseFragment<FragmentProfileBinding,ProfileViewModel>(Fr
 
         binding.backButton.setOnClickListener {
             findNavController().popBackStack()
+        }
+        binding.favoriteBtn.setOnClickListener {
+            findNavController().navigate(R.id.action_profileFragment_to_favoritesFragment)
         }
 
     }

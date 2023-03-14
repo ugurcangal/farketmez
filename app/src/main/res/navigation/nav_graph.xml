@@ -25,7 +25,11 @@
         android:id="@+id/profileFragment"
         android:name="com.example.farketmez.view.ProfileFragment"
         android:label="fragment_profile"
-        tools:layout="@layout/fragment_profile" />
+        tools:layout="@layout/fragment_profile" >
+        <action
+            android:id="@+id/action_profileFragment_to_favoritesFragment"
+            app:destination="@id/favoritesFragment" />
+    </fragment>
     <fragment
         android:id="@+id/chosenCategoryFragment"
         android:name="com.example.farketmez.view.ChosenCategoryFragment"
@@ -97,4 +101,9 @@
             android:id="@+id/action_chosenSeriesFragment_to_mainFragment"
             app:destination="@id/mainFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/favoritesFragment"
+        android:name="com.example.farketmez.view.FavoritesFragment"
+        android:label="fragment_favorites"
+        tools:layout="@layout/fragment_favorites" />
 </navigation>
