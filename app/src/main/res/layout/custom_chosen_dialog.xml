@@ -4,13 +4,13 @@
     android:id="@+id/card"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    app:cardCornerRadius="7dp"
+    app:cardCornerRadius="12dp"
     app:cardElevation="0dp"
     app:cardMaxElevation="0dp"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="322dp"
+        android:layout_width="382dp"
         android:background="@color/logoGreen"
         android:layout_height="284dp">
 
@@ -31,7 +31,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Rastgele Yemeğiniz Seçiliyor!"
-            android:textSize="18sp"
+            android:textSize="20sp"
             android:textColor="@color/logoBrown"
             android:fontFamily="@font/comfortaa"
             android:layout_marginTop="10dp"

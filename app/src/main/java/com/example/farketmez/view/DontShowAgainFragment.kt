@@ -2,6 +2,7 @@ package com.example.farketmez.view
 
 import android.os.Bundle
 import android.view.View
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.farketmez.BaseFragment
 import com.example.farketmez.adapter.DontShowAgainAdapter
@@ -18,6 +19,10 @@ class DontShowAgainFragment : BaseFragment<FragmentDontShowAgainBinding,DontShow
 
         viewModel.getAllDontShowAgain(binding)
         observeDontShowAgainList()
+
+        binding.closeBtn.setOnClickListener {
+            findNavController().popBackStack()
+        }
 
     }
 

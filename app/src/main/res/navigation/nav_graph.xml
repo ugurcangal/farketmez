@@ -84,7 +84,8 @@
         tools:layout="@layout/fragment_chosen_film" >
         <action
             android:id="@+id/action_chosenFilmFragment_to_mainFragment"
-            app:destination="@id/mainFragment" />
+            app:destination="@id/mainFragment"
+            app:popUpTo="@id/mainFragment" />
     </fragment>
     <fragment
         android:id="@+id/chosenBookFragment"
@@ -93,7 +94,8 @@
         tools:layout="@layout/fragment_chosen_book" >
         <action
             android:id="@+id/action_chosenBookFragment_to_mainFragment"
-            app:destination="@id/mainFragment" />
+            app:destination="@id/mainFragment"
+            app:popUpTo="@id/mainFragment" />
     </fragment>
     <fragment
         android:id="@+id/chosenSeriesFragment"
@@ -102,7 +104,8 @@
         tools:layout="@layout/fragment_chosen_series" >
         <action
             android:id="@+id/action_chosenSeriesFragment_to_mainFragment"
-            app:destination="@id/mainFragment" />
+            app:destination="@id/mainFragment"
+            app:popUpTo="@id/mainFragment" />
     </fragment>
     <fragment
         android:id="@+id/favoritesFragment"

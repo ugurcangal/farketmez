@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.lifecycle.Observer
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.farketmez.BaseFragment
 import com.example.farketmez.R
@@ -25,6 +26,10 @@ class FavoritesFragment :
 
         viewModel.getAllFavorites(binding)
         observeFavoriteList()
+
+        binding.closeBtn.setOnClickListener {
+            findNavController().popBackStack()
+        }
     }
 
 

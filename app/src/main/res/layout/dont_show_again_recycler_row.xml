@@ -18,32 +18,45 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-            <ImageView
-                android:id="@+id/dontShowAgainIV"
-                android:layout_width="102dp"
-                android:layout_height="97dp"
-                android:scaleType="centerCrop"
+            <androidx.cardview.widget.CardView
+                android:id="@+id/imageCard"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
                 android:layout_marginBottom="20dp"
                 android:layout_marginStart="20dp"
+                app:cardCornerRadius="95dp"
+                app:cardBackgroundColor="#FFFFFFFF"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintTop_toTopOf="parent"/>
+                app:layout_constraintTop_toTopOf="parent">
+
+
+                <ImageView
+                    android:id="@+id/dontShowAgainIV"
+                    android:layout_width="102dp"
+                    android:layout_height="97dp"
+                    android:scaleType="centerCrop"/>
+
+
+            </androidx.cardview.widget.CardView>
+
 
             <TextView
                 android:id="@+id/dontShowAgainTV"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:text=""
                 android:textColor="@color/logoBrown"
                 android:fontFamily="@font/comfortaa"
                 android:textStyle="bold"
                 android:textSize="24sp"
-                android:layout_marginRight="20dp"
+                android:gravity="center"
+                android:layout_marginRight="30dp"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@id/dontShowAgainIV"/>
+                app:layout_constraintStart_toEndOf="@id/imageCard"/>
 
             <View
                 android:id="@+id/deleteItemButton"
