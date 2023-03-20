@@ -22,7 +22,36 @@
           }
         },
         {
-          "client_id": "453469294211-l8oprmbpfsma13bbhcq3joutcdlt35j5.apps.googleusercontent.com",
+          "client_id": "453469294211-t5ifccdutmc5n8hlp3i80s8qos48m4ov.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAzNIIzrJkTiHXuleELViWNmVXO5lSa1CQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "453469294211-l8oprmbpfsma13bbhcq3joutcdlt35j5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:453469294211:android:c9e037acc10e22231715b6",
+        "android_client_info": {
+          "package_name": "com.ugurcangal.farketmez"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "453469294211-t5ifccdutmc5n8hlp3i80s8qos48m4ov.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
