@@ -30,6 +30,9 @@ class ChosenBookViewModel : BaseViewModel() {
                 if (books.isNotEmpty()){
                     binding.bookNameTxt.text = book.get("bookName") as String
                     Glide.with(view).load(book.get("imgLink").toString()).into(binding.bookIV)
+                    binding.writerText.text = "Yazar: " + book.get("writer").toString()
+                    binding.bookCategoryText.text = "Kategori: " + book.get("category").toString()
+                    binding.subjectText.text = "Konu: " + book.get("subject").toString()
                 }
             }
         }

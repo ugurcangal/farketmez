@@ -30,6 +30,10 @@ class ChosenSeriesViewModel : BaseViewModel() {
                 if (series.isNotEmpty()){
                     binding.seriesNameTxt.text = oneSerie.get("seriesName") as String
                     Glide.with(view).load(oneSerie.get("imgLink").toString()).into(binding.seriesIV)
+                    binding.starsText.text = "Oyuncular: " + oneSerie.get("stars").toString()
+                    binding.seriesCategoryText.text = "Kategori: " + oneSerie.get("category").toString()
+                    binding.subjectText.text = "Konu: " + oneSerie.get("subject").toString()
+
                 }
             }
         }

@@ -79,7 +79,6 @@
                 android:id="@+id/filmIV"
                 android:layout_width="match_parent"
                 android:layout_height="429dp"
-                android:layout_marginTop="20dp"
                 android:scaleType="fitCenter"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -111,15 +110,81 @@
                 android:id="@+id/dontShowThisAgainTxt"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Bunu Bir Daha Gösterme"
+                android:text=" Bunu Bir Daha Gösterme"
                 android:textSize="16sp"
                 android:textStyle="bold"
                 android:fontFamily="@font/comfortaa"
-                android:layout_marginTop="50dp"
-                android:textColor="@color/logoGreen"
+                android:drawableLeft="@drawable/red_block_24"
+                android:gravity="center"
+                android:textColor="@color/red"
+                android:layout_marginTop="22dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/nameBG"/>
+
+            <TextView
+                android:id="@+id/directorText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Yönetmen : "
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:fontFamily="@font/comfortaa"
+                android:textColor="@color/logoGreen"
+                android:layout_marginTop="22dp"
+                android:layout_marginStart="22dp"
+                android:layout_marginEnd="22dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/dontShowThisAgainTxt"/>
+
+            <TextView
+                android:id="@+id/starsText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Oyuncular : "
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:fontFamily="@font/comfortaa"
+                android:textColor="@color/logoGreen"
+                android:layout_marginTop="22dp"
+                android:layout_marginStart="22dp"
+                android:layout_marginEnd="22dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/directorText"/>
+
+            <TextView
+                android:id="@+id/filmCategoryText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Kategori : "
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:fontFamily="@font/comfortaa"
+                android:textColor="@color/logoGreen"
+                android:layout_marginTop="22dp"
+                android:layout_marginStart="22dp"
+                android:layout_marginEnd="22dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/starsText"/>
+
+            <TextView
+                android:id="@+id/subjectText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Konu : "
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:fontFamily="@font/comfortaa"
+                android:textColor="@color/logoGreen"
+                android:layout_marginTop="22dp"
+                android:layout_marginStart="22dp"
+                android:layout_marginEnd="22dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/filmCategoryText"/>
 
 
 
