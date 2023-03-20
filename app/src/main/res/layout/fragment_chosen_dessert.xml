@@ -54,19 +54,20 @@
     <ImageView
         android:id="@+id/dessertIV"
         android:layout_width="match_parent"
-        android:layout_height="229dp"
+        android:layout_height="0dp"
         android:layout_marginTop="20dp"
         android:scaleType="centerCrop"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toBottomOf="@id/logoIV"/>
     <View
         android:id="@+id/nameBG"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:layout_height="60dp"
         android:background="@drawable/food_name_bg"
         app:layout_constraintBottom_toBottomOf="@id/dessertIV"
-        app:layout_constraintTop_toBottomOf="@id/dessertIV"
+        app:layout_constraintTop_toTopOf="@id/dessertIV"
         />
 
     <TextView
@@ -89,11 +90,15 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Bunu Bir Daha Gösterme"
-        android:textSize="16sp"
+        android:textSize="18sp"
         android:textStyle="bold"
         android:fontFamily="@font/comfortaa"
         android:layout_marginBottom="10dp"
-        android:textColor="@color/logoGreen"
+        android:textColor="@color/logoBrown"
+        android:shadowColor="@color/logoGreen"
+        android:shadowDx="3"
+        android:shadowDy="3"
+        android:shadowRadius="2"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"/>
