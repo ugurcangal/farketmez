@@ -7,28 +7,35 @@
     tools:context=".view.ProfileFragment">
 
 
-
+    <ImageView
+        android:id="@+id/logoIV"
+        android:layout_width="49dp"
+        android:layout_height="70dp"
+        android:src="@drawable/logo"
+        android:layout_marginTop="28dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
 
     <View
         android:id="@+id/greenBack"
         android:layout_width="match_parent"
         android:layout_height="167dp"
         android:background="@drawable/profile_green_rec"
-        android:layout_marginTop="56dp"
+        android:layout_marginTop="36dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+        app:layout_constraintTop_toBottomOf="@id/logoIV"/>
 
     <View
         android:id="@+id/backButton"
-        android:layout_width="32dp"
-        android:layout_height="32dp"
-        android:layout_marginTop="22dp"
+        android:layout_width="38dp"
+        android:layout_height="38dp"
+        android:layout_marginTop="28dp"
         android:layout_marginLeft="18dp"
-        android:backgroundTint="@color/logoBrown"
         android:background="@drawable/back_button"
-        app:layout_constraintStart_toStartOf="@id/greenBack"
-        app:layout_constraintTop_toTopOf="@id/greenBack"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         />
 
     <TextView
@@ -71,29 +78,15 @@
         app:layout_constraintStart_toStartOf="@id/greenBack"/>
 
 
-    <ImageView
-        android:id="@+id/signoutBtn"
-        android:layout_width="32dp"
-        android:layout_height="32dp"
-        android:background="@drawable/signout_icon"
-        android:layout_marginEnd="18dp"
-        android:layout_marginTop="22dp"
-        app:layout_constraintEnd_toEndOf="@id/greenBack"
-        app:layout_constraintTop_toTopOf="@id/greenBack"/>
-
-
-
-
 
     <ImageView
         android:id="@+id/btnBG"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/profile_page_button_bg"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="50dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toBottomOf="@id/greenBack"/>
 
     <ImageButton
@@ -101,11 +94,11 @@
         android:layout_width="0dp"
         android:layout_height="113dp"
         android:backgroundTint="#00000000"
-        android:paddingEnd="80dp"
+        android:paddingEnd="110dp"
         android:src="@drawable/profile_favorite_btn"
         app:layout_constraintEnd_toEndOf="@+id/btnBG"
         app:layout_constraintStart_toStartOf="@id/btnBG"
-        app:layout_constraintTop_toBottomOf="@id/personalInfoBtn" />
+        app:layout_constraintTop_toTopOf="@id/btnBG" />
     <View
         android:id="@+id/line"
         android:layout_width="0dp"
@@ -115,16 +108,18 @@
         app:layout_constraintStart_toStartOf="@id/btnBG"
         app:layout_constraintTop_toBottomOf="@id/favoriteBtn"/>
 
+
+
     <ImageButton
-        android:id="@+id/personalInfoBtn"
+        android:id="@+id/blocksBtn"
         android:layout_width="0dp"
         android:layout_height="113dp"
-        android:paddingEnd="28dp"
+        android:paddingEnd="60dp"
         android:backgroundTint="#00000000"
-        android:src="@drawable/profile_personalinfo_btn"
+        android:src="@drawable/profile_blocks_btn"
         app:layout_constraintEnd_toEndOf="@+id/btnBG"
         app:layout_constraintStart_toStartOf="@id/btnBG"
-        app:layout_constraintTop_toTopOf="@id/btnBG" />
+        app:layout_constraintTop_toBottomOf="@id/favoriteBtn" />
 
     <View
         android:id="@+id/line2"
@@ -133,38 +128,21 @@
         android:background="@drawable/brown_line"
         app:layout_constraintEnd_toEndOf="@+id/btnBG"
         app:layout_constraintStart_toStartOf="@id/btnBG"
-        app:layout_constraintTop_toBottomOf="@id/personalInfoBtn"/>
-
-    <ImageButton
-        android:id="@+id/blocksBtn"
-        android:layout_width="0dp"
-        android:layout_height="113dp"
-        android:paddingEnd="20dp"
-        android:backgroundTint="#00000000"
-        android:src="@drawable/profile_blocks_btn"
-        app:layout_constraintEnd_toEndOf="@+id/btnBG"
-        app:layout_constraintStart_toStartOf="@id/btnBG"
-        app:layout_constraintTop_toBottomOf="@id/favoriteBtn" />
-
-    <View
-        android:id="@+id/line3"
-        android:layout_width="0dp"
-        android:layout_height="1dp"
-        android:background="@drawable/brown_line"
-        app:layout_constraintEnd_toEndOf="@+id/btnBG"
-        app:layout_constraintStart_toStartOf="@id/btnBG"
         app:layout_constraintTop_toBottomOf="@id/blocksBtn"/>
 
+
     <ImageButton
-        android:id="@+id/settingsBtn"
+        android:id="@+id/signoutBtn"
         android:layout_width="0dp"
         android:layout_height="113dp"
-        android:paddingEnd="80dp"
+        android:paddingEnd="90dp"
         android:backgroundTint="#00000000"
-        android:src="@drawable/profile_settings_btn"
+        android:src="@drawable/profile_signout"
         app:layout_constraintEnd_toEndOf="@+id/btnBG"
         app:layout_constraintStart_toStartOf="@id/btnBG"
         app:layout_constraintTop_toBottomOf="@id/blocksBtn" />
+
+
 
 
 
