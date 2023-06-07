@@ -29,7 +29,7 @@ class ChosenFoodViewModel : BaseViewModel() {
                 }
                 if (foods.isNotEmpty()){
                     binding.foodNameTxt.text = food.get("foodName") as String
-                    Glide.with(view).load(food.get("imgLink").toString()).into(binding.foodIV)
+                    Glide.with(view).asBitmap().load(food.get("imgLink").toString()).into(binding.foodIV)
                 }
             }
         }

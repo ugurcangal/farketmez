@@ -28,7 +28,7 @@ class ChosenDessertViewModel : BaseViewModel() {
                 }
                 if (desserts.isNotEmpty()){
                     binding.dessertNameTxt.text = dessert.get("dessertName") as String
-                    Glide.with(view).load(dessert.get("imgLink").toString()).into(binding.dessertIV)
+                    Glide.with(view).asBitmap().load(dessert.get("imgLink").toString()).into(binding.dessertIV)
                 }
             }
         }
